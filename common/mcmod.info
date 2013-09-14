@@ -1,0 +1,20 @@
+[
+{
+  "modid": "UniversalAspect",
+  "name": "The Universal Aspect",
+  "description": "COOLNESS",
+  "version": "@VERSION@",
+  "url": "",
+  "updateUrl": "",
+  "authorList": [
+    "Spyobird",
+  ],
+  "credits": "By Spyobird, a Minecraft Mod.",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]
