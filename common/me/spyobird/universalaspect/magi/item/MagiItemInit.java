@@ -11,14 +11,24 @@ import net.minecraft.item.ItemStack;
 public class MagiItemInit
 {
     public static Item ArcaneLevitationWand;
+    public static Item Card;
     
     public static void init()
     {
         ArcaneLevitationWand = new MagiWandArcaneLevitation(Integers.ARCANE_LEVITATION_WAND_ID);
+        Card = new MagiItemCard(Integers.CARD_ID);
         
         GameRegistry.registerItem(ArcaneLevitationWand, Strings.ARCANE_LEVITATION_WAND_UNLOCAL);
-        
+        GameRegistry.registerItem(Card, Strings.CARD_UNLOCAL);
+    }
+    
+    public static void names()
+    {
         LanguageRegistry.addName(ArcaneLevitationWand, Strings.ARCANE_LEVITATION_WAND_LOCAL);
-        LanguageRegistry.addName(new ItemStack(ArcaneLevitationWand, 1, 50), Strings.ARCANE_LEVITATION_WAND_LOCAL + Strings.WAND_CHARGED);
+        
+        for (int i = 0; i < MagiItemCard.itemtypes.length; i++)
+        {
+            LanguageRegistry.addName(new ItemStack(Card, 1, i), Strings.CARD_LOCAL[i]);
+        }
     }
 }

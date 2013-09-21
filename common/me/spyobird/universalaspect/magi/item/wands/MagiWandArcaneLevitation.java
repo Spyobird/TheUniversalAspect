@@ -8,9 +8,11 @@ import me.spyobird.universalaspect.core.lib.references.References;
 import me.spyobird.universalaspect.core.lib.references.Strings;
 import me.spyobird.universalaspect.magi.item.ItemUAMAGI;
 import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.Icon;
 import net.minecraft.util.MathHelper;
 
@@ -23,6 +25,7 @@ public class MagiWandArcaneLevitation extends ItemUAMAGI
     {
         super(id);
         // TODO Auto-generated constructors stub
+        this.setUnlocalizedName(Strings.ARCANE_LEVITATION_WAND_UNLOCAL);
         this.setMaxStackSize(1);
         this.setUnlocalizedName(Strings.ARCANE_LEVITATION_WAND_UNLOCAL);
     }
@@ -66,11 +69,15 @@ public class MagiWandArcaneLevitation extends ItemUAMAGI
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack itemstack, EntityPlayer player, List info, boolean useExtraInformation)
     {
-        info.add("This Wand is " + itemstack.getItemDamage() * 2 + "% charged.");
+        info.add(EnumChatFormatting.WHITE + "Elements:");
+        info.add(EnumChatFormatting.YELLOW + "Air - Base");
+        info.add(EnumChatFormatting.LIGHT_PURPLE + "Arcane - Modifier");
+        info.add(EnumChatFormatting.WHITE + "This Wand is " + itemstack.getItemDamage() * 2 + "% charged.");
         
         if (isCharged(itemstack.getItemDamage()))
         {
-            info.add("This Wand is filled with mystical enegies.");
+            info.add(EnumChatFormatting.AQUA + "This Wand is filled with mystical enegies.");
+            info.add(EnumChatFormatting.GOLD + "Charged");
         }
     }
     
@@ -99,5 +106,19 @@ public class MagiWandArcaneLevitation extends ItemUAMAGI
     private boolean isCharged(int dmg)
     {
         return dmg>= 50;
+    }
+    
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void getSubItems(int id, CreativeTabs tab, List list)
+    {
+        list.add(new ItemStack(id, 1, 0));
+        list.add(new ItemStack(id, 1, 50));
+    }
+    
+    @Override
+    public String getItemDisplayName(ItemStack itemStack)
+    {
+        return EnumChatFormatting.YELLOW + super.getItemDisplayName(itemStack);
     }
 }

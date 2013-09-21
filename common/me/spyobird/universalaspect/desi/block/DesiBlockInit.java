@@ -16,7 +16,13 @@ public class DesiBlockInit
         FancyBrickBase = new DesiBlockFancyBrick(Integers.FANCY_BRICK_BLOCK_ID);
         
         GameRegistry.registerBlock(FancyBrickBase, DesiItemBlockFancyBrick.class, Strings.FANCY_BRICK_BLOCK_UNLOCAL);
-        
-        LanguageRegistry.addName(FancyBrickBase, Strings.FANCY_BRICK_BLOCK_LOCAL);
+    }
+    
+    public static void names()
+    {
+        for (int i = 0; i < DesiItemBlockFancyBrick.blocktypes.length; i++)
+        {
+            LanguageRegistry.addName(new ItemStack(FancyBrickBase, 1, i), Strings.FANCY_BRICK_BLOCK_LOCAL[i]);
+        }
     }
 }

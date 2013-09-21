@@ -1,5 +1,6 @@
 package me.spyobird.universalaspect.core.lib.references;
 
+
 public class Strings
 {
     //Creative Tabs
@@ -16,17 +17,21 @@ public class Strings
     public static final String UADESI_TABS_LOCAL = "The Universal Aspect - Aesthetics";
     
     //Blocks
+    public static final String MACHINE_GRINDER_BLOCK_UNLOCAL = "Machine_Grinder";
+    public static final String MACHINE_GRINDER_BLOCK_ACTIVE_UNLOCAL = "Machine_Grinder_active";
+    public static final String CARD_READER_BLOCK_UNLOCAL = "CardReader";
     public static final String ORE_COPPER_BLOCK_UNLOCAL = "Ore_Copper";
     public static final String FANCY_BRICK_BLOCK_UNLOCAL = "FancyBrick";
     
+    public static final String MACHINE_GRINDER_BLOCK_LOCAL = "Grinder";
+    public static final String CARD_READER_BLOCK_LOCAL = "Card Reader";
     public static final String ORE_COPPER_BLOCK_LOCAL = "Copper Ore";
-    public static final String FANCY_BRICK_BLOCK_LOCAL = "Brick";
+    public static final String[] FANCY_BRICK_BLOCK_LOCAL = { "Sandstone Brick", "Coal Brick", "Quartz Brick", "Iron Brick", "Gold Brick", "Redstone Brick", "Lapis Brick", "Diamond Brick", "Emerald Brick", "Obsidian Brick", "Endstone Brick" };
     
     //Items
     public static final String ARCANE_LEVITATION_WAND_UNLOCAL = "Wand_ArcaneLevitation";
+    public static final String CARD_UNLOCAL = "Card";
     
     public static final String ARCANE_LEVITATION_WAND_LOCAL = "Arcane Levitation Wand";
-    
-    //Wand Addon Strings
-    public static final String WAND_CHARGED = " - Charged";
+    public static final String[] CARD_LOCAL = { "Blank Card", "Fire Card", "Water Card", "Earth Card", "Air Card", "Arcane Card", "Ominous Card" };
 }

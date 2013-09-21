@@ -1,7 +1,5 @@
 package me.spyobird.universalaspect.natu.ores.block;
 
-import java.util.Random;
-
 import me.spyobird.universalaspect.core.lib.creativetabs.CreativeTabInit;
 import me.spyobird.universalaspect.core.lib.references.Strings;
 import me.spyobird.universalaspect.natu.block.BlockUANATU;
@@ -16,10 +14,6 @@ public class OreBlockCopperOre extends BlockUANATU
         this.setUnlocalizedName(Strings.ORE_COPPER_BLOCK_UNLOCAL);
         this.setHardness(3.0F);
         this.setResistance(5.0F);
-    }
-    
-    public int idDropped(int par1, Random par2Random, int par3)
-    {
-        return OresBlockInit.CopperOre.blockID;
+        this.setCreativeTab(CreativeTabInit.tabsuniversalaspectmisc);
     }
 }

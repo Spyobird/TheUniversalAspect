@@ -6,4 +6,9 @@ public class OresItemInit
     {
         
     }
+    
+    public static void names()
+    {
+        
+    }
 }

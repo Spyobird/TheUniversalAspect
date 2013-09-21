@@ -5,10 +5,11 @@ import me.spyobird.universalaspect.core.lib.creativetabs.CreativeTabInit;
 import me.spyobird.universalaspect.core.lib.references.References;
 import me.spyobird.universalaspect.core.proxies.common.CommonProxy;
 import me.spyobird.universalaspect.desi.block.DesiBlockInit;
-import me.spyobird.universalaspect.desi.tileentity.DesiTileEntityInit;
+import me.spyobird.universalaspect.magi.block.MagiBlockInit;
 import me.spyobird.universalaspect.magi.item.MagiItemInit;
 import me.spyobird.universalaspect.natu.ores.block.OresBlockInit;
 import me.spyobird.universalaspect.natu.ores.item.OresItemInit;
+import me.spyobird.universalaspect.tech.block.TechBlockInit;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -33,23 +34,33 @@ public class UniversalAspect
     {
         ConfigHandler.init(event.getSuggestedConfigurationFile());
         
-        proxy.registerRenderers();
-                
-        CreativeTabInit.init();
+        proxy.registerRenderers();                
         
+        TechBlockInit.init();
+        
+        MagiBlockInit.init();
+        MagiItemInit.init();
+            
         OresBlockInit.init();
         OresItemInit.init();
         
-        MagiItemInit.init();
-        
         DesiBlockInit.init();
-        DesiTileEntityInit.init();
     }
     
     @EventHandler
     public void load(FMLInitializationEvent event)
     {
-
+        CreativeTabInit.names();
+        
+        TechBlockInit.names();
+        
+        MagiBlockInit.names();
+        MagiItemInit.names();
+            
+        OresBlockInit.names();
+        OresItemInit.names();
+        
+        DesiBlockInit.names();
     }
     
     @EventHandler

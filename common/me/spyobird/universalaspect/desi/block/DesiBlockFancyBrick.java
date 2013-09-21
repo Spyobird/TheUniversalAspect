@@ -2,7 +2,6 @@ package me.spyobird.universalaspect.desi.block;
 
 import java.util.List;
 
-import me.spyobird.universalaspect.core.lib.creativetabs.CreativeTabInit;
 import me.spyobird.universalaspect.core.lib.references.References;
 import me.spyobird.universalaspect.core.lib.references.Strings;
 import net.minecraft.block.material.Material;
@@ -16,12 +15,6 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class DesiBlockFancyBrick extends BlockUADESI
 {
     @SideOnly(Side.CLIENT)
-    public static final String[] blocktypes = new String[] { "sandstone", "coal", "quartz", "iron", "gold", "redstone", "lapis", "diamond", "emerald", "obsidian", "endstone"};
-    
-    @SideOnly(Side.CLIENT)
-    public static final String[] blocknames = new String[] { "Sandstone", "Coal", "Quartz", "Iron", "Gold", "Redstone", "Lapis", "Diamond", "Emerald", "Obsidian", "Endstone"};
-    
-    @SideOnly(Side.CLIENT)
     private Icon[] icons;
     
     public DesiBlockFancyBrick(int id)
@@ -32,23 +25,19 @@ public class DesiBlockFancyBrick extends BlockUADESI
         this.setHardness(0.8F);
     } 
     
-
     @SideOnly(Side.CLIENT)
-    public Icon getIcon(int par1, int par2)
+    public Icon getIcon(int side, int meta)
     {
-        if (par2 < 0 || par2 >= this.icons.length)
+        if (meta < 0 || meta >= this.icons.length)
         {
-            par2 = 0;
+            meta = 0;
         }
-        return this.icons[par2];
+        return this.icons[meta];
     }
 
-    /**
-     * Determines the damage on the item the block drops. Used in cloth and wood.
-     */
-    public int damageDropped(int par1)
+    public int damageDropped(int meta)
     {
-        return par1;
+        return meta;
     }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
@@ -63,13 +52,13 @@ public class DesiBlockFancyBrick extends BlockUADESI
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister par1IconRegister)
+    public void registerIcons(IconRegister iconRegister)
     {
-        this.icons = new Icon[blocktypes.length];
+        this.icons = new Icon[DesiItemBlockFancyBrick.blocktypes.length];
         
         for (int i = 0; i < this.icons.length; ++i)
         {
-            this.icons[i] = par1IconRegister.registerIcon(References.MOD_ID.toLowerCase() + ":" + this.getCleanUnlocalizedName(getUnlocalizedName()) + "_" + blocktypes[i]);
+            this.icons[i] = iconRegister.registerIcon(References.MOD_ID.toLowerCase() + ":" + this.getUnlocalizedName().substring(5) + "_" + DesiItemBlockFancyBrick.blocktypes[i]);
         }
     }
 }

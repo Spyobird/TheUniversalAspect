@@ -1,4 +1,4 @@
-package me.spyobird.universalaspect.desi.block;
+package me.spyobird.universalaspect.tech.block;
 
 import me.spyobird.universalaspect.core.lib.creativetabs.CreativeTabInit;
 import me.spyobird.universalaspect.core.lib.references.References;
@@ -8,12 +8,12 @@ import net.minecraft.client.renderer.texture.IconRegister;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockUADESI extends Block
+public class BlockUATECH extends Block
 {
-    public BlockUADESI(int id, Material material)
+    public BlockUATECH(int id, Material material)
     {
         super(id, material);
-        this.setCreativeTab(CreativeTabInit.tabsuniversalaspectdesi);
+        this.setCreativeTab(CreativeTabInit.tabsuniversalaspecttech);
     }
     
     @Override

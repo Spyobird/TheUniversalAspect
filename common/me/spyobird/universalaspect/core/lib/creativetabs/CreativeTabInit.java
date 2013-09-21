@@ -12,7 +12,7 @@ public class CreativeTabInit
     public static CreativeTabUA tabsuniversalaspectnatu = new CreativeTabUANATU(CreativeTabs.getNextID(), Strings.UANATU_TABS_DEFAULT);
     public static CreativeTabUA tabsuniversalaspectdesi = new CreativeTabUADESI(CreativeTabs.getNextID(), Strings.UADESI_TABS_DEFAULT);
     
-    public static void init()
+    public static void names()
     {
         LanguageRegistry.instance().addStringLocalization("itemGroup." + Strings.UAMISC_TABS_DEFAULT, "en_US", Strings.UAMISC_TABS_LOCAL);
         LanguageRegistry.instance().addStringLocalization("itemGroup." + Strings.UATECH_TABS_DEFAULT, "en_US", Strings.UATECH_TABS_LOCAL);
