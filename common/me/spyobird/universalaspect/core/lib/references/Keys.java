@@ -4,7 +4,8 @@ public class Keys
 {
     //Blocks
     public static final String MACHINE_GRINDER_BLOCK_KEY = "MACHINEGRINDER_KEY";
-    public static final String CARD_READER_BLOCK_KEY = "MACHINEGRINDER_KEY";
+    public static final String SONIC_TNT_BLOCK_KEY = "SONICTNT_KEY";
+    public static final String CARD_READER_BLOCK_KEY = "CARDREADER_KEY";
     public static final String ORE_COPPER_BLOCK_KEY = "ORECOPPER_KEY";
     public static final String FANCY_BRICK_BLOCK_KEY = "FANCYBRICK_KEY";
     

@@ -4,6 +4,8 @@ import me.spyobird.universalaspect.core.lib.configuration.ConfigHandler;
 import me.spyobird.universalaspect.core.lib.creativetabs.CreativeTabInit;
 import me.spyobird.universalaspect.core.lib.references.References;
 import me.spyobird.universalaspect.core.proxies.common.CommonProxy;
+import me.spyobird.universalaspect.core.util.CraftingManager;
+import me.spyobird.universalaspect.core.util.TileEntityManager;
 import me.spyobird.universalaspect.desi.block.DesiBlockInit;
 import me.spyobird.universalaspect.magi.block.MagiBlockInit;
 import me.spyobird.universalaspect.magi.item.MagiItemInit;
@@ -45,6 +47,10 @@ public class UniversalAspect
         OresItemInit.init();
         
         DesiBlockInit.init();
+        
+        TileEntityManager.init();
+        
+        CraftingManager.init();
     }
     
     @EventHandler

@@ -6,10 +6,12 @@ import me.spyobird.universalaspect.core.lib.references.References;
 import me.spyobird.universalaspect.core.lib.references.Strings;
 import me.spyobird.universalaspect.tech.block.BlockUATECH;
 import me.spyobird.universalaspect.tech.block.TechBlockInit;
+import me.spyobird.universalaspect.tech.tileentity.TechTileEntityGrinder;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Icon;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
@@ -142,5 +144,11 @@ public class TechBlockMachineGrinder extends BlockUATECH
     public int idPicked(World world, int par1, int par2, int par3)
     {
         return TechBlockInit.GrinderMachine.blockID;
+    }
+    
+    @Override
+    public TileEntity createNewTileEntity(World world)
+    {
+        return new TechTileEntityGrinder();
     }
 }

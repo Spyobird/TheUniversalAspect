@@ -5,6 +5,7 @@ public class Integers
     //Blocks
     public static int MACHINE_GRINDER_BLOCK_ID;
     public static int MACHINE_GRINDER_BLOCK_ACTIVE_ID;
+    public static int SONIC_TNT_BLOCK_ID;
     
     public static int CARD_READER_BLOCK_ID;
     
@@ -19,6 +20,7 @@ public class Integers
     //Blocks
     public static final int MACHINE_GRINDER_BLOCK_ID_DEFAULT = 500;
     public static final int MACHINE_GRINDER_BLOCK_ID_ACTIVE_DEFAULT = 501;
+    public static final int SONIC_TNT_BLOCK_ID_DEFAULT = 559;
     
     public static final int CARD_READER_BLOCK_ID_DEFAULT = 800;
     

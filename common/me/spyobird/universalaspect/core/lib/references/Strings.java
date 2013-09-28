@@ -19,14 +19,19 @@ public class Strings
     //Blocks
     public static final String MACHINE_GRINDER_BLOCK_UNLOCAL = "Machine_Grinder";
     public static final String MACHINE_GRINDER_BLOCK_ACTIVE_UNLOCAL = "Machine_Grinder_active";
+    public static final String SONIC_TNT_BLOCK_UNLOCAL = "SonicTNT";
     public static final String CARD_READER_BLOCK_UNLOCAL = "CardReader";
     public static final String ORE_COPPER_BLOCK_UNLOCAL = "Ore_Copper";
     public static final String FANCY_BRICK_BLOCK_UNLOCAL = "FancyBrick";
     
     public static final String MACHINE_GRINDER_BLOCK_LOCAL = "Grinder";
+    public static final String SONIC_TNT_BLOCK_LOCAL = "Sonic Repulsion Detonator";
     public static final String CARD_READER_BLOCK_LOCAL = "Card Reader";
     public static final String ORE_COPPER_BLOCK_LOCAL = "Copper Ore";
     public static final String[] FANCY_BRICK_BLOCK_LOCAL = { "Sandstone Brick", "Coal Brick", "Quartz Brick", "Iron Brick", "Gold Brick", "Redstone Brick", "Lapis Brick", "Diamond Brick", "Emerald Brick", "Obsidian Brick", "Endstone Brick" };
+    
+    public static final String GRINDER_TILE_NAME = "Machine_GrinderTile";
+    public static final String SONIC_TNT_TILE_NAME = "SonicTNTTile";
     
     //Items
     public static final String ARCANE_LEVITATION_WAND_UNLOCAL = "Wand_ArcaneLevitation";

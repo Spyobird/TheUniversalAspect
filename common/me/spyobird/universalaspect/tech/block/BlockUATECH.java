@@ -2,13 +2,15 @@ package me.spyobird.universalaspect.tech.block;
 
 import me.spyobird.universalaspect.core.lib.creativetabs.CreativeTabInit;
 import me.spyobird.universalaspect.core.lib.references.References;
-import net.minecraft.block.Block;
+import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockUATECH extends Block
+public class BlockUATECH extends BlockContainer
 {
     public BlockUATECH(int id, Material material)
     {
@@ -26,5 +28,12 @@ public class BlockUATECH extends Block
     protected String getCleanUnlocalizedName(String unlocalizedName)
     {
         return unlocalizedName.substring(unlocalizedName.indexOf(".") + 1);
+    }
+
+    @Override
+    public TileEntity createNewTileEntity(World world)
+    {
+        // TODO Auto-generated method stub
+        return null;
     }
 }
